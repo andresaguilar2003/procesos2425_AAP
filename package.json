@@ -1,0 +1,14 @@
+{
+  "name": "procesos2425_aap",
+  "version": "1.0.0",
+  "description": "Proyecto para la clase de procesos, curso 2024/2025",
+  "main": "servidor/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
