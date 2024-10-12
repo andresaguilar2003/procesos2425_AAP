@@ -4,7 +4,7 @@
   "description": "Proyecto para la clase de procesos, curso 2024/2025",
   "main": "servidor/index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node servidor/index.js",
     "testW": "node_modules\\.bin\\jasmine-node servidor",
     "test": "./node_modules/.bin/jasmine-node servidor"
   },
