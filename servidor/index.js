@@ -1,15 +1,18 @@
 const fs=require("fs");
 const express = require('express');
 const app = express();
-const modelo = require("./modelo.js");
+const modelo = require("../servidor/modelo.js");
 
-const PORT = process.env.PORT || 3000;
-app.use(express.static(__dirname + "/"));
+
 
 let sistema = new modelo.Sistema();
 
+const PORT = process.env.PORT || 3000;
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../cliente'))); // Asegúrate de que la ruta sea correcta
+
 app.get("/", function(request,response){
-    var contenido=fs.readFileSync(__dirname+"/../cliente/index.html");
+    var contenido=fs.readFileSync("/home/codespace/procesos2425_AAP/cliente/index.html");
         response.setHeader("Content-type","text/html");
         response.send(contenido);
 });
