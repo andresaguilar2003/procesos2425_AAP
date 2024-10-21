@@ -20,7 +20,8 @@ app.get("/", function(request,response){
 app.get("/agregarUsuario/:nick",function(request,response){
     let nick=request.params.nick;
     let res=sistema.agregarUsuario(nick);
-    response.send(res); });
+    response.send(res); 
+});
 
 
 // Ruta para eliminar un usuario
