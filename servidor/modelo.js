@@ -3,13 +3,11 @@ function Sistema() {
 
     this.agregarUsuario = function(nick) {
         let res = { "nick": -1 };
-<<<<<<< HEAD
         if (!this.usuarios[nick]) {
             this.usuarios[nick] = new Usuario(nick);
             res.nick = nick;
         } else {
             console.log("el nick " + nick + " está en uso");
-=======
         if (!this.usuarios[nick]) { 
             this.usuarios[nick] = new Usuario(nick); 
             res.nick = nick; 
@@ -17,19 +15,9 @@ function Sistema() {
             console.log("el nick " + nick + " está en uso");            
         }
         return res; 
-    };
+        };
+    }
 
-    this.eliminarUsuario = function(nick) {
-        let res = false;
-        if (this.usuarios[nick]) {
-            delete this.usuarios[nick];
-            res = true;
->>>>>>> 1e8c5b8 (Hecho hasta el 3.6)
-        }
-        return res;
-    };
-
-<<<<<<< HEAD
     this.eliminarUsuario = function(nick) {
         let res = false;
         if (this.usuarios[nick]) {
@@ -38,9 +26,14 @@ function Sistema() {
         }
         return res;
     };
-
-=======
->>>>>>> 1e8c5b8 (Hecho hasta el 3.6)
+    this.eliminarUsuario = function(nick) {
+        let res = false;
+        if (this.usuarios[nick]) {
+            delete this.usuarios[nick];
+            res = true;
+        }
+        return res;
+    };
     this.obtenerUsuarios = function() {
         return this.usuarios;
     };
